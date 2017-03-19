@@ -131,8 +131,8 @@
   "dbparams": {    
     "params": [{
       "paramKey":"##param1##",
-      "paramValue":"file://sheet.json",
-      "paramType":"url"
+      "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/themeItem1.json",
+      "paramType":"themeItem"
     }            
      ]  
   }
