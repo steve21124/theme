@@ -1,44 +1,10 @@
 {
-      "theme": {
-
-              "type": "horizontal",
-              "style": {
-                "background": "#ffffff",
-                "align": "center"
-              },
-              "components": [
-                {
-                  "type": "textfield",
-                  "placeholder": "Enter text and press Done",
-                  "name": "blank"
-                },
-                {
-                  "type": "button",
-                  "text": "Done",
+                  "type": "label",
+                  "text": "Comments ",
                   "style": {
-                    "width": "60",
-                    "height": "50",
-                    "color": "#ff0000"
-                  },
-                  "action": {
-                    "type": "$util.banner",
-                    "options": {
-                      "title": "Selected Value",
-                      "description": "{{$get.blank}}"
-                    }
+                    "padding": "20",
+                    "font": "HelveticaNeue-CondensedBold",
+                    "size": "14",
+                    "color": "#000000"
                   }
-                }
-              ]
-                      
-
-                                           
-      }, 
-      "dbparams": {    
-        "params": [{
-          "paramKey":"##param1##",
-          "paramValue":"",
-          "paramType":"field"
-        }            
-         ]  
-      }
 }
