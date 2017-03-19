@@ -1,0 +1,44 @@
+{
+      "theme": {
+
+              "type": "horizontal",
+              "style": {
+                "background": "#ffffff",
+                "align": "center"
+              },
+              "components": [
+                {
+                  "type": "textfield",
+                  "placeholder": "Enter text and press Done",
+                  "name": "blank"
+                },
+                {
+                  "type": "button",
+                  "text": "Done",
+                  "style": {
+                    "width": "60",
+                    "height": "50",
+                    "color": "#ff0000"
+                  },
+                  "action": {
+                    "type": "$util.banner",
+                    "options": {
+                      "title": "Selected Value",
+                      "description": "{{$get.blank}}"
+                    }
+                  }
+                }
+              ]
+                      
+
+                                           
+      }, 
+      "dbparams": {    
+        "params": [{
+          "paramKey":"##param1##",
+          "paramValue":"",
+          "paramType":"field"
+        }            
+         ]  
+      }
+}
