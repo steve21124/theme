@@ -85,12 +85,12 @@
     "params": [
 	 {
        "paramKey":"##param1##",
-       "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/themeItem1.json",
+       "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/itemTheme.json",
        "paramType":"itemTheme"
      },
 	 {
        "paramKey":"##param2##",
-       "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/maintheme.json",
+       "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/itemTheme.json",
        "paramType":"mainTheme"
      },
     ]  
