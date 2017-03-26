@@ -1,0 +1,98 @@
+{
+  "$jason": {
+    "head": {
+      "title": "{ ˃̵̑ᴥ˂̵̑}",
+      "actions": {
+        "$load": {
+          "type": "$excel.fetchSheets",
+          "options": {
+              "worksheetObjectId": "{{$params.worksheetObjectId}}",
+              "sheeetObjectId":"{{$params.sheeetObjectId}}"
+          },
+          "success": {
+            "type": "$render"
+          }
+        }
+      },
+      "templates": {
+        "body": {
+          "header": {
+            "menu": {
+              "text": "Settings",
+              "style": {
+                "color": "#0000ff",
+                "font": "HelveticaNeue-Bold",
+                "size": "17"
+              },
+              "action": {
+                "type": "$util.picker",
+                "options": {
+                  "items": [
+                    {
+                      "text": "Edit Theme",
+                      "action": {
+                        "type": "$excel.editExcelTheme",
+                        "options": {
+                            "worksheetObjectId": "{{$params.worksheetObjectId}}",
+                            "sheeetObjectId":"{{$params.sheeetObjectId}}"
+                        }
+                      }                      
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "footer": {
+            "tabs": {
+              "style": {
+                "background": "rgba(255,255,255,0.8)",
+                "color": "#009efa"
+              },
+                "items": {
+                    "{{#each $jason.sheetList[0] }}": {
+                        "image": "https://raw.githubusercontent.com/Jasonette/Twitter-UI-example/master/images/home.png",
+                        "text": "Home",
+                        "style": {
+                            "height": "21"
+                        },
+                        "href": {
+                            "url": "##param2##",
+                            "options": {
+                                "worksheetObjectId": "{{worksheetObjectId}}",
+                                "sheeetObjectId":"{{objectId}}",
+                                "templateObjectId":"{{templateObjectId}}"
+                            }
+                        }
+                    }
+                }
+            }
+          },
+          "sections": [
+            {
+              "items": {
+                "{{#each $jason.sheetList[1] }}": {
+                     "@":"##param1##"                                         
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "dbparams": {
+    "params": [
+	 {
+       "paramKey":"##param1##",
+       "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/themeItem1.json",
+       "paramType":"itemTheme"
+     },
+	 {
+       "paramKey":"##param2##",
+       "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/maintheme.json",
+       "paramType":"mainTheme"
+     },
+    ]  
+  }    
+}
