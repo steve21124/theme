@@ -90,7 +90,7 @@
      },
 	 {
        "paramKey":"##param2##",
-       "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/itemTheme.json",
+       "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/maintheme.json",
        "paramType":"urlTemplate"
      },
     ]  
