@@ -57,7 +57,7 @@
                             "height": "21"
                         },
                         "href": {
-                            "url": "##param2##",
+                            "url": "https://raw.githubusercontent.com/steve21124/theme/master/maintheme.json",
                             "options": {
                                 "worksheetObjectId": "{{worksheetObjectId}}",
                                 "sheeetObjectId":"{{objectId}}",
@@ -87,12 +87,7 @@
        "paramKey":"##param1##",
        "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/itemTheme.json",
        "paramType":"urlTemplateItem"
-     },
-	 {
-       "paramKey":"##param2##",
-       "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/maintheme.json",
-       "paramType":"urlTemplate"
-     },
+     }
     ]  
   }    
 }
