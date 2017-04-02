@@ -1,0 +1,140 @@
+{
+  "$jason": {
+    "head": {
+      "title": "{ ˃̵̑ᴥ˂̵̑}",
+      "actions": {
+        "$pull": {
+          "type": "$excel.fetchWorksheets",
+          "success": {
+              "type": "$render"
+           }
+        },
+        "$show": {
+          "type": "$excel.fetchWorksheets",
+          "success": {
+            "type": "$render"
+          }
+        },
+        "$load": {
+          "type": "$excel.fetchWorksheets",
+          "success": {
+            "type": "$render"
+          }
+        },
+        "fetch": {
+          "type": "$excel.fetchWorksheets",
+          "success": {
+            "type": "$render"
+          }
+        }
+      },
+      "templates": {
+        "body": {
+          "header": {
+            "menu": {
+              "text": "Transfer File",
+              "style": {
+                "color": "#0000ff",
+                "font": "HelveticaNeue-Bold",
+                "size": "17"
+              },
+              "action": {
+                "type": "$util.picker",
+                "options": {
+                  "items": [
+                    {
+                      "text": "Download file from Google Drive",
+                      "action": {
+                        "type": "$excel.settingsGoogleUpload",
+                        "options": {
+                          "title": "Success",
+                          "description": "This is a banner"
+                        }
+                      }
+                    },
+                    {
+                      "text": "Upload file from Wifi",
+                      "action": {
+                        "type": "$excel.settingsWiFiUpload",
+                        "options": {
+                          "title": "Alert",
+                          "description": "This is an alert triggered by $util.picker"
+                        }
+                      }
+                      
+                    },
+                    {
+                      "text": "{{JSON.stringify($jason.worksheets)}}",
+                      "action": {
+                        "type": "$excel.importLocalExcel",
+                        "options": {
+                          "title": "Alert",
+                          "description": "This is an alert triggered by $util.picker"
+                        }
+                      }                      
+                    },
+                    {
+                      "text": "Delete DB",
+                      "action": {
+                        "type": "$excel.clearExcelDatabase",
+                        "options": {
+                          "title": "Alert",
+                          "description": "This is an alert triggered by $util.picker"
+                        }
+                      }                      
+                    },                             
+                    {
+                      "text": "Edit Excel Theme",
+                      "action": {
+                        "type": "$excel.editExcelTheme",
+                        "options": {
+                          "title": "Alert",
+                          "description": "This is an alert triggered by $util.picker"
+                        }
+                      }                      
+                    }                            
+                  ]
+                }
+              }
+            }
+          },
+          "sections": [
+            {
+              "items": {
+                "{{#each $jason.worksheets }}": {
+                    
+                      "type": "label",
+                      "text": "REMOTE Comments {{objectId}}",
+                      "style": {
+                        "padding": "20",
+                        "font": "HelveticaNeue-CondensedBold",
+                        "size": "14",
+                        "color": "#000000"
+                      },
+                      "href": {
+                        "url": "##param1##",
+                        "transition": "modal",                          
+                        "options": {
+                          "worksheetObjectId": "{{objectId}}",
+                          "templateObjectId":"{{templateObjectId}}"
+                        }
+                      }
+                                     
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "dbparams": {    
+    "params": [{
+      "paramKey":"##param1##",
+      "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/maintheme.json",
+      "paramType":"urlTemplate"
+    }            
+     ]  
+  }
+
+}
