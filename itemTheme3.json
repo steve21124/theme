@@ -1,10 +1,23 @@
 {
+  "dbjsons": 
+       {
                   "type": "label",
-                  "text": "333Comments ",
+                  "text": " {{##param1##}} 333Comments ",
                   "style": {
                     "padding": "20",
                     "font": "HelveticaNeue-CondensedBold",
                     "size": "14",
                     "color": "#000000"
                   }
+       }
+  ,
+  "dbparams": {    
+    "params": [{
+      "paramKey":"##param1##",
+      "paramValue":"",
+      "paramType":"field.string"
+    }            
+     ]  
+  }
+
 }
