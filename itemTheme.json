@@ -1,5 +1,5 @@
 {
-  "dbjsons": {
+  "dbjsons": 
        {
                   "type": "label",
                   "text": " {{##param1##}} Comments ",
@@ -10,7 +10,7 @@
                     "color": "#000000"
                   }
        }
-  },
+  ,
   "dbparams": {    
     "params": [{
       "paramKey":"##param1##",
