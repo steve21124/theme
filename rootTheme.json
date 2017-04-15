@@ -112,7 +112,7 @@
                         "color": "#000000"
                       },
                       "href": {
-                        "url": "##param1##",
+                        "url": "https://raw.githubusercontent.com/steve21124/theme/master/maintheme.json",
                         "transition": "modal",                          
                         "options": {
                           "worksheetObjectId": "{{objectId}}",
@@ -127,14 +127,5 @@
         }
       }
     }
-  },
-  "dbparams": {    
-    "params": [{
-      "paramKey":"##param1##",
-      "paramValue":"https://raw.githubusercontent.com/steve21124/theme/master/maintheme.json",
-      "paramType":"urlTemplate"
-    }            
-     ]  
   }
-
 }
