@@ -2,7 +2,7 @@
   "dbjsons": 
        {
                   "type": "label",
-                  "text": " {{##param1##}} 4444Comments ",
+                  "text": " {{##field1##}} 4444Comments ",
                   "style": {
                     "padding": "20",
                     "font": "HelveticaNeue-CondensedBold",
@@ -13,7 +13,7 @@
   ,
   "dbparams": {    
     "params": [{
-      "paramKey":"##param1##",
+      "paramKey":"##field1##",
       "paramValue":"",
       "paramType":"field.string"
     }            
